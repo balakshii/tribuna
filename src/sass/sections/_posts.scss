@@ -1,0 +1,55 @@
+.posts{
+  .container{
+    padding: 10px 10px 0 10px;
+  }
+  &__item,&__item-md{
+    margin-bottom: 10px;
+  }
+  &__list{
+    .row {
+
+    }
+      & > div{
+        //margin-bottom: 10px;
+        &:last-child{
+          margin-bottom: 0;
+        }
+      }
+  }
+  // Media queries for tablet - start
+  @media screen and (min-width: 680px){
+    .row{
+      display: flex;
+      flex-wrap: wrap;
+    }
+    &__item,&__item-md {
+      width: 50%;
+      padding: 0 5px;
+    }
+  }
+  // Media queries for laptops and desktop - start
+  @media screen and (min-width: 1280px){
+    .container{
+      padding: 10px 15px 0 15px;
+    }
+    &__list{
+        margin-bottom: 0 !important;
+    }
+    &__item{
+      width: 25%;
+      margin-bottom: 10px;
+    }
+    &__item-md{
+      margin-bottom: 10px;
+    }
+    &__item,&__item-md{
+      &:first-child{
+        padding-left: 0 !important;
+      }
+      &:last-child{
+        padding-right: 0;
+      }
+    }
+  }
+  // Media queries for laptops and desktop - end
+}

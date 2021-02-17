@@ -1,0 +1,26 @@
+//- blog-author.pug
+
+extends ../layout.pug
+block variables
+    - var title = 'Лілія Войцехівська'
+block content
+    section.authorInfo
+        .container
+            img(src="./dist/img/ava.jpg",alt="Лілія Войцехівська",title="Лілія Войцехівська").authorInfo__avatar
+            .authorInfo__name
+                span Лілія Войцехівська
+            .authorInfo__quantity 3 записи
+    section.posts
+        .container
+            .posts__list
+                .row
+                    include ../components/blogCardMiddle
+                .row
+                    include ../components/postCard
+                .row
+                    include ../components/postCard
+                .row
+                    include ../components/postCard
+            button.btn.btn-white Більше матеріалів
+                .btn__load
+                    | <i class="fas fa-sync fa-spin"></i>

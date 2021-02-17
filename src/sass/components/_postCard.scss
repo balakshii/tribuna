@@ -1,0 +1,234 @@
+.single{
+  .postCard{
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+  }
+}
+.postCard{
+  background: $white;
+  width: 100%;
+  height: 345px;
+  position: relative;
+  transition: box-shadow 0.3s;
+  &__img{
+    width: 100% !important;
+    height: auto !important;
+  }
+  &__imgContainer{
+    text-align: center;
+    height: 200px;
+    width: 100%;
+    overflow: hidden;
+    a{
+      display: block;
+    }
+  }
+  &__title{
+    color: $black;
+    @include museoSansCyrl(500);
+    font-size: 16px;
+    line-height: 22px;
+    a{
+      color: $black;
+      max-height: 90px;
+      overflow: hidden;
+      display: block;
+    }
+  }
+  &__label{
+    position: absolute;
+    top:20px;
+    left:0;
+    z-index: 2;
+    text-transform: uppercase;
+    background-color: $burgundy;
+    padding: 0 10px;
+    height: 30px;
+    color: $white;
+    @include museoSansCyrl(500);
+    font-size: 12px;
+    line-height: 30px;
+  }
+  &.active{
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.2);
+  }
+  &:hover{
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.2);
+  }
+  &__author{
+    position: absolute;
+    left:15px;
+    bottom: 120px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px $white solid;
+    overflow: hidden;
+    img{
+      width: inherit;
+      height: inherit;
+      filter: grayscale(100%);
+    }
+    &:hover + .postCard__authorTooltip {
+      opacity: 1;
+    }
+  }
+  &__video{
+    @extend .postCard__author;
+    background-color: $burgundy;
+    border: none;
+    color:$white;
+    left: auto;
+    right: 15px;
+    i{
+      font-size: 16px;
+      margin: 18px 0 0 19px;
+    }
+  }
+  &__title{
+    padding: 25px 15px 0 15px;
+    height: 123px;
+    overflow: hidden;
+    display: block;
+  }
+  &__meta{
+    padding: 0 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $grey;
+    @include museoSansCyrl(500);
+    font-size: 14px;
+    line-height: 11px;
+    div{
+      display: flex;
+      align-items: center;
+    }
+  }
+  &__date{
+    display: flex;
+  }
+  &__border{
+    background-color: #979797;
+    width: 1px;
+    height: 12px;
+    margin: 0 10px;
+  }
+  &__comments{
+    position: relative;
+    &:after{
+      background: url("../img/comment_ico_red_bg.png") no-repeat;
+      background-size: cover !important;
+      width: 14px;
+      height: 14px;
+      content: "";
+      display: block;
+      position: absolute;
+      right: -18px;
+      top:-2px;
+      @media (-webkit-min-device-pixel-ratio: 2) {
+        background: url("../img/comment_ico_red_bg@2x.png") no-repeat;
+      }
+    }
+  }
+  &__t{
+    background: url(../img/vector/t_ico.svg) no-repeat;
+    width: 20px;
+    height: 20px;
+    margin: 0 4px 0 4px;
+    position: relative;
+    top:3px;
+    display: inline-block;
+  }
+  &__p{
+    @extend .postCard__t;
+    background: url(../img/vector/p_ico.svg) no-repeat;
+  }
+  &__authorTooltip{
+    position: absolute;
+    left:75px;
+    bottom:124px;
+    height:42px;
+    min-width:160px;
+    border-radius:3px;
+    padding:5px 10px;
+    font-size:14px;
+    line-height:16px;
+    color:$black;
+    box-shadow:0 2px 4px rgba(0, 0, 0, 0.180537);
+    background:#fff;
+    opacity:0;
+    transition:opacity 0.5s ease-out;
+
+    a {
+      display: block;
+      font-weight: 300;
+      color: $amaranth;
+    }
+    &:before {
+      content:'';
+      display:block;
+      width: 10px;
+      height:10px;
+      position:absolute;
+      top:16px;
+      left: -5px;
+      transform: rotate(-45deg);
+      background: #fff;
+    }
+    &:after {
+      content:'';
+      display:block;
+      width: 20px;
+      height:100%;
+      position:absolute;
+      top:0;
+      left: -20px;
+    }
+    &:hover {
+      opacity: 1;
+    }
+  }
+  &--middle{
+    @extend .postCard;
+    // Media queries for laptops and desktop - start
+    @media screen and (min-width: 1280px){
+      height: 480px;
+      width: 100%;
+      .postCard__imgContainer{
+        height: 356px;
+      }
+      .postCard__author{
+        bottom: 110px !important;
+      }
+      .postCard__title{
+        height: 102px;
+      }
+      .postCard__authorTooltip{
+        bottom: 115px;
+      }
+    }
+
+    // Media queries for laptops and desktop - end
+  }
+  // Media queries for laptops and desktop - start
+  @media screen and (min-width: 1280px){
+    &__title{
+      color: $black;
+      @include museoSansCyrl(500);
+      font-size: 18px;
+      line-height: 22px;
+      &:hover{
+        a{
+          text-decoration: underline;
+        }
+      }
+    }
+    .postCard__author{
+      bottom: 130px;
+    }
+    &__authorTooltip{
+      bottom: 134px;
+    }
+  }
+  // Media queries for laptops and desktop - end
+}

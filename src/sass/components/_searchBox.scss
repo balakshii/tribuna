@@ -1,0 +1,68 @@
+.searchBox{
+  position: fixed;
+  background: #171717;
+  width: 100%;
+  height: 100%;
+  z-index: 4;
+  top:0;
+  left:0;
+  form{
+    position: absolute;
+    width: 270px;
+    height: 40px;
+    top:0;
+    left:0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    button{
+      font-size: 17px;
+      position: absolute;
+      right: 10px;
+      top:12px;
+      color: $white;
+    }
+    input[type="text"]{
+      width: 270px;
+      height: 40px;
+      border-radius: 3px;
+      background-color: #343434;
+      color: #8d8d8d;
+      @include museoSansCyrl(500);
+      font-size: 16px;
+      border: none;
+      outline: none;
+      padding: 0 20px;
+    }
+  }
+  .fa-chevron-left{
+    color: $white;
+    font-size: 17px;
+    margin: 16px 0 0 16px;
+    cursor: pointer;
+  }
+}
+
+//page search result
+.boxSearchInput {
+  margin: 0 10px 12px;
+  input[type="text"] {
+    display: block;
+    width: 100%;
+    height: 50px;
+    @include museoSansCyrl(500);
+    font-size: 20px;
+    color: $black;
+    padding: 5px 10px 5px 20px;
+    border: 1px solid #EEEEEE;
+    box-sizing: border-box;
+    box-shadow: 0 1px 3px rgba(137, 137, 137, 0.365461);
+    border-radius: 2px;
+    background: $white;
+  }
+  // Media queries for laptops and desktop - start
+  @media screen and (min-width: 1280px){
+    margin: 0 0 22px;
+  }
+  // Media queries for laptops and desktop - end
+}

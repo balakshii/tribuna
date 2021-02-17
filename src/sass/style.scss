@@ -1,0 +1,157 @@
+@import "normalize";
+@import "settings";
+
+//global styles
+body,html{
+  height: 100%;
+  min-height: 100%;
+  color: $black;
+  @include museoSansCyrl(500);
+  font-size: 15px;
+  line-height: 22px;
+}
+h1,h2,h3,h4,h5,h6{
+  padding: 0;
+  margin: 0;
+}
+body{
+  padding-top: 44px;
+  background-color: #f0f0f0;
+  @media screen and (min-width: 1280px){
+    padding-top: 61px;
+  }
+}
+button{
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 0;
+  &:focus{
+    outline: none;
+  }
+}
+a{
+  text-decoration: none;
+}
+.owl-carousel .owl-item img{
+  width: auto;
+}
+
+.main__title{
+  margin: 5px 0 10px;
+  line-height: normal;
+  text-align: center;
+  font-size: 24px;
+
+  @media screen and (min-width: 1280px){
+    text-align: left;
+    font-size: 30px;
+  }
+}
+.at-resp-share-element .at4-share-count-container{
+  float:none !important;
+}
+@media screen and (min-width: 980px){
+  .at-resp-share-element .at-share-btn .at-icon-wrapper{
+    position: relative;
+    top: 5px
+  }
+}
+.fixed_link--telegram-group{
+  display: block;
+  background-image: url('../img/icon-telegram.png');
+  position: fixed;
+  background-size: cover;
+  bottom: 15px;
+  right: 40px;
+  width: 55px;
+  height: 55px;
+  cursor: pointer;
+  z-index: 10001;
+  -webkit-animation: shake 6s infinite alternate;
+  animation: shake 6s infinite alternate;
+}
+@media (max-width: 767px) {
+  .fixed_link--telegram-group{
+    right: 5px;
+    bottom: 10px;
+  }
+
+  .single-post .fixed_link--telegram-group {
+    bottom: 55px;
+  }
+}
+.aligncenter {
+    margin: auto;
+    float: none;
+    display: block !important;
+  img{
+    margin: auto;
+    float: none;
+    display: block !important;
+  }
+}
+
+
+@-webkit-keyframes shake {
+  5%, 45% {
+    -webkit-transform: translate3d(0, -1px, 0);
+    transform: translate3d(0, -1px, 0);
+  }
+  10%, 40% {
+    -webkit-transform: translate3d(0, 2px, 0);
+    transform: translate3d(0, 2px, 0);
+  }
+  15%, 25%, 35% {
+    -webkit-transform: translate3d(0, -4px, 0);
+    transform: translate3d(0, -4px, 0);
+  }
+  20%, 30% {
+    -webkit-transform: translate3d(0, 4px, 0);
+    transform: translate3d(0, 4px, 0);
+  }
+}
+@keyframes shake {
+  5%, 45% {
+    -webkit-transform: translate3d(0, -1px, 0);
+    transform: translate3d(0, -1px, 0);
+  }
+  10%, 40% {
+    -webkit-transform: translate3d(0, 2px, 0);
+    transform: translate3d(0, 2px, 0);
+  }
+  15%, 25%, 35% {
+    -webkit-transform: translate3d(0, -4px, 0);
+    transform: translate3d(0, -4px, 0);
+  }
+  20%, 30% {
+    -webkit-transform: translate3d(0, 4px, 0);
+    transform: translate3d(0, 4px, 0);
+  }
+}
+
+//components
+@import "components/slider";
+@import "components/topPost";
+@import "components/lastPosts";
+@import "components/postCard";
+@import "components/shortPosts";
+@import "components/banners";
+@import "components/blogItem";
+@import "components/btn";
+@import "components/searchBox";
+@import "components/mobileMenuBox";
+@import "components/authorInfo";
+@import "components/columns";
+@import "components/comments";
+//section
+@import "sections/header";
+@import "sections/quote";
+@import "sections/featuredPosts";
+@import "sections/categoryPosts";
+@import "sections/posts";
+@import "sections/blogs";
+@import "sections/footer";
+@import "sections/postItem";
+
+//pages

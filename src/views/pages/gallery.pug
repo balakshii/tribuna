@@ -1,0 +1,21 @@
+//- gallery.pug
+
+extends ../layout.pug
+block variables
+    - var title = 'Галерея'
+block content
+    section.posts
+        .container
+            h1.main__title Фотогалерея
+            .posts__list#posts-gallery
+                .row
+                    include ../components/galleryCard
+                .row
+                    include ../components/galleryCard
+                .row
+                    include ../components/galleryCard
+                .row
+                    include ../components/galleryCard
+            button.btn.btn-white Більше матеріалів
+                .btn__load
+                    | <i class="fas fa-sync fa-spin"></i>

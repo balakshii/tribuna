@@ -1,0 +1,40 @@
+.blogs{
+  margin-top: 10px;
+  padding: 15px;
+  background-color: $white;
+  &__title{
+    color: $black;
+    @include museoSansCyrl(500);
+    font-size: 24px;
+    margin-bottom: 20px;
+    a{
+      color: $black;
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+  }
+  .blogItem{
+    margin-bottom: 20px;
+    &:hover{
+      span{
+        text-decoration: underline;
+      }
+    }
+  }
+  // Media queries for laptops and desktop - start
+  @media screen and (min-width: 1280px){
+    margin-top: 0;
+    padding: 20px;
+    &__list{
+      display: flex;
+      .blogItem{
+        width: 33.3%;
+        &__title{
+          width: 250px;
+        }
+      }
+    }
+  }
+  // Media queries for laptops and desktop - end
+}

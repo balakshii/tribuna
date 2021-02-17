@@ -1,0 +1,48 @@
+.btn{
+  padding: 0 20px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+  border-radius: 1px;
+  background-color: $white;
+  color: $burgundy;
+  @include museoSansCyrl(500);
+  font-size: 18px;
+  text-align: center;
+  display: block;
+  margin: 0;
+  width: 100%;
+  height: 60px;
+  &:hover{
+    text-decoration: underline;
+  }
+  &__load{
+    display: none;
+  }
+  &.load{
+    position: relative;
+    .btn__load{
+      font-size: 25px;
+      z-index: 2;
+      position: absolute;
+      left:0;
+      top:0;
+      right: 0;
+      bottom: 0;
+      width: 35px;
+      height: 31px;
+      margin: auto;
+      display: inline-block;
+    }
+    &:before{
+      content: "";
+      background-color: $white;
+      opacity: 0.8;
+      display: block;
+      left:0;
+      top:0;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      z-index: 1;
+    }
+  }
+}

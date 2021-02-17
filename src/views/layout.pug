@@ -1,0 +1,23 @@
+//- layout.pug
+block variables
+doctype
+html
+    head
+        meta(charset="utf-8")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        meta(name="viewport" content="device-width, initial-scale=1.0")
+        link(rel="stylesheet",href="./dist/css/fonts.css")
+        link(rel="stylesheet",href="./dist/css/fontawesome.min.css")
+        link(rel="stylesheet",href="./dist/libs/owl/assets/owl.carousel.min.css")
+        link(rel="stylesheet",href="./dist/libs/owl/assets/owl.theme.default.min.css")
+        link(rel="stylesheet",href="./dist/css/style.min.css")
+        script(src="https://code.jquery.com/jquery-3.3.1.min.js")
+        title tribuna.pl.ua - #{title}
+    body(class=bodyClass)
+        include components/mobileMenuBox
+        include sections/header
+        main(role="main")
+            block content
+        include sections/footer
+        script(src="./dist/libs/owl/owl.carousel.min.js")
+        script(src="src/js/app.js")

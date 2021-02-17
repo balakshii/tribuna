@@ -1,0 +1,94 @@
+.postsShort{
+  padding-top: 5px;
+  margin: 0 10px;
+}
+.postsShort__items {
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+  background: $white;
+}
+
+// Media queries for laptops and desktop - start
+@media screen and (min-width: 1280px){
+  .postsShort{
+    margin: 0;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+    background: $white;
+
+    .btn {
+      height: 74px;
+      box-shadow: none;
+    }
+  }
+  .postsShort__items {
+    box-shadow: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: 2px solid rgba(34,34,34,0.1);
+  }
+}
+// Media queries for laptops and desktop - end
+
+.postShortCard{
+  margin: 0 18px;
+  padding: 12px 0;
+  border-bottom: 2px solid rgba(34,34,34,0.1);
+  &:last-child {
+    border-bottom: none;
+  }
+  &__title{
+    color: $black;
+    @include museoSansCyrl(500);
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 6px;
+    &:hover{
+      a{
+        text-decoration: underline;
+      }
+    }
+    a{
+      color: $black;
+    }
+  }
+  &__meta{
+    display: flex;
+    color: $after-grey;
+    @include museoSansCyrl(500);
+    font-size: 12px;
+    line-height: 16px;
+  }
+  &__border{
+    background-color: #979797;
+    width: 1px;
+    height: 12px;
+    margin: 0 10px;
+  }
+  &__comments{
+    position: relative;
+    &:after{
+      background: url("../img/comment_ico_red_bg.png") no-repeat;
+      background-size: cover !important;
+      width: 14px;
+      height: 14px;
+      content: "";
+      display: block;
+      position: absolute;
+      right: -18px;
+      top: 1px;
+      @media (-webkit-min-device-pixel-ratio: 2) {
+        background: url("../img/comment_ico_red_bg@2x.png") no-repeat;
+      }
+    }
+  }
+  // Media queries for laptops and desktop - start
+  @media screen and (min-width: 1280px){
+    margin: 0 38px;
+    padding: 15px 0;
+    &__title{
+      font-size: 18px;
+    }
+  }
+  // Media queries for laptops and desktop - end
+}

@@ -1,0 +1,43 @@
+.quote{
+  padding: 10px 15px;
+  .container{
+    max-width: 802px;
+  }
+  &__item{
+    text-align: center;
+    a:hover{
+      .quote__link{
+        border-bottom: 1px #ba281e solid;
+      }
+    }
+  }
+  &__title{
+    color: $black;
+    font-family: "PT Serif";
+    font-size: 16px;
+    font-weight: 400;
+    display: inline-block;
+  }
+  &__link{
+    color: $burgundy;
+    font-family: "PT Serif";
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 400;
+    margin-left: 14px;
+    i{
+      position: relative;
+      top:2px;
+      left:5px;
+      font-size: 18px;
+    }
+  }
+  // Media queries for laptops and desktop - start
+  @media screen and (min-width: 1280px){
+    padding: 19px 0px;
+    .container{
+      max-width: 1320px;
+    }
+  }
+  // Media queries for laptops and desktop - start
+}

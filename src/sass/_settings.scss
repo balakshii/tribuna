@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Serif&subset=cyrillic');
+*{
+  box-sizing: border-box;
+}
+.clearfix{
+  &:after{
+    content: '';
+    clear: both;
+    display: table;
+  }
+}
+.overflow{
+  overflow: hidden;
+}
+.container{
+  max-width: 1320px;
+  padding: 0 10px;
+  margin: 0 auto;
+  position: relative;
+  height: 100%;
+}
+
+//colors
+$white: #ffffff;
+$red: #ff0000;
+$black: #000000;
+$grey: #8e8e8e;
+$after-grey: #7c7c7c;
+$after-black: #131415;
+$dark-grey: #171717;
+$light-grey: #666666;
+$burgundy: #b41726;
+$amaranth: #d0021b;
+
+//fonts
+@mixin museoSansCyrl($size){
+  font-family: 'Museo Sans Cyrl';
+  @if $size{
+    font-weight: $size;
+  } @else{
+    font-weight: normal;
+  }
+}
+// Media queries for laptops and desktop - start
+@media screen and (min-width: 1280px){
+  .container{
+    padding: 0 15px;
+  }
+}
+// Media queries for laptops and desktop - end

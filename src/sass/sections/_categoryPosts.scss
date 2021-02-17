@@ -1,0 +1,39 @@
+.categoryPosts{
+  .container{
+    padding: 10px 0 0;
+  }
+  ul.slider{
+    margin: 0 0 10px;
+    padding: 0;
+    list-style: none;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 0%, #000000 100%);
+  }
+  .posts__col3 {
+    padding: 0 10px;
+  }
+  // Media queries for tablet - start
+  @media screen and (min-width: 680px){
+    .posts__col3{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 0 5px;
+      .posts__item{
+        width: 50%;
+      }
+    }
+  }
+  // Media queries for laptops and desktop - start
+  @media screen and (min-width: 1280px){
+    .container{
+      padding: 10px 15px 0 15px;
+    }
+    .posts__col3{
+      padding: 0;
+      .posts__item{
+        width: 33.333%;
+      }
+    }
+  }
+  // Media queries for laptops and desktop - end
+}

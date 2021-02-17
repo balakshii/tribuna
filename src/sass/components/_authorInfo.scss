@@ -1,0 +1,48 @@
+.authorInfo{
+  margin: 27px 0 10px;
+  text-align: center;
+  &__avatar{
+    width: 111px;
+    display: block;
+    margin: 0 auto 15px;
+  }
+  &__name{
+    color: $black;
+    @include museoSansCyrl(600);
+    font-size: 24px;
+    line-height: normal;
+  }
+  &__quantity{
+    margin-top: 3px;
+    font-size: 18px;
+    color: #898989;
+  }
+  // Media queries for laptops and desktop - start
+  @media screen and (min-width: 1280px){
+    margin: 34px 0 24px;
+    &__avatar{
+      width: 133px;
+      margin: 0 auto 13px;
+    }
+    &__name{
+      position: relative;
+      font-size: 30px;
+    }
+    &__name:before {
+      content: '';
+      display: block;
+      width: 100%;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      border-top: 1px solid #D0D0D0;
+    }
+    &__name span {
+      position: relative;
+      display: inline-block;
+      padding: 0 25px;
+      background-color: #f0f0f0;
+    }
+  }
+  // Media queries for laptops and desktop - end
+}

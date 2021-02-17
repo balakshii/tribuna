@@ -1,0 +1,222 @@
+.boxComments, .lastNews {
+  padding: 0 22px 12px;
+  background: $white;
+}
+.listComments, .listLastNews {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.postSidebarItem{
+  padding: 12px 0;
+  border-bottom: 2px solid rgba(34,34,34,0.1);
+  &:last-child {
+    border-bottom: none;
+  }
+  &__title{
+    line-height: 21px;
+    font-size: 14px;
+    color: $black;
+    &:hover{
+      a{
+        text-decoration: underline;
+      }
+    }
+    a {
+      color: inherit;
+    }
+  }
+  &__subtitle{
+    height: 18px;
+    margin-top: 3px;
+    overflow: hidden;
+    line-height: 18px;
+    font-size: 12px;
+    font-weight: normal;
+    color: $after-grey;
+    &:hover{
+      a{
+        text-decoration: underline;
+      }
+    }
+    a {
+      color: inherit;
+      display: inline-block;
+      vertical-align: top;
+    }
+    img {
+      display: block;
+      max-height: 18px;
+      float: left;
+      margin-right: 8px;
+    }
+  }
+  &__meta {
+    display: flex;
+    line-height: 22px;
+    margin-top: 1px;
+    font-size: 12px;
+    color: $after-grey;
+  }
+  &__author {
+    margin-left: 15px;
+    position: relative;
+    padding-left: 17px;
+    color: inherit;
+    background: url("../img/user-ico.png") no-repeat left 3px;
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+  .postCard__border {
+    margin-top: 5px;
+  }
+  .postCard__comments:after {
+    top: 7px;
+  }
+}
+
+.postItemComments {
+  padding: 14px 15px 7px;
+  border: 1px solid #E7E7E7;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  margin: 0 10px 16px;
+
+  .modulePosts__title {
+    margin: 0 0 5px;
+  }
+  // Media queries for tablet - start
+  @media screen and (min-width: 680px){
+    padding: 17px 30px 7px;
+    max-width: calc(100% - 20px);
+    margin: 0 auto 16px;
+  }
+  // Media queries for laptops and desktop - start
+  @media screen and (min-width: 1280px){
+    max-width: inherit;
+  }
+}
+.postItemCommentItem {
+  position: relative;
+  border-bottom: 2px solid #DFDFDF;
+  padding: 38px 0 13px;
+  &-depth2{
+    padding-left: 30px !important;
+  }
+
+  &:last-child {
+    border-bottom: none;
+  }
+  &__title {
+    font-size: 15px;
+    line-height: 21px;
+    color: $black;
+    margin-bottom: 7px;
+  }
+  &__meta {
+    display: flex;
+    padding: 5px 0;
+    line-height: 12px;
+    font-size: 12px;
+    color: $after-grey;
+  }
+  &__author {
+    position: absolute;
+    top: 14px;
+    left: 0;
+    @include museoSansCyrl(600);
+    font-size: 15px;
+    color: $black;
+
+    & + .postCard__border {
+      display: none;
+    }
+  }
+  &__reply {
+    @include museoSansCyrl(600);
+    font-size: 14px;
+    color: $amaranth;
+  }
+  &__boxLike {
+    position: absolute;
+    right: 20px;
+    bottom: 17px;
+    line-height: 20px;
+    font-size: 14px;
+    color: $black;
+    overflow: hidden;
+
+    span {
+      display: inline-block;
+      vertical-align: middle;
+      margin-left: 9px;
+    }
+  }
+  &__likeEmpty {
+    color: #CBCBCB;
+  }
+  &__like {
+    display: inline-block;
+    width: 18px;
+    height: 16px;
+    vertical-align: middle;
+    overflow: hidden;
+    background: url("../img/icon_like_sprite.png") no-repeat -18px 0;
+
+    &:hover, &:active {
+      background: url("../img/icon_like_sprite.png") no-repeat 0 0;
+    }
+    @media (-webkit-min-device-pixel-ratio: 2) {
+      background: url("../img/icon_like_sprite.png") no-repeat -1px -26px;
+      background-size: 18px auto;
+
+      &:hover, &:active {
+        background: url("../img/icon_like_sprite.png") no-repeat -1px -11px;
+        background-size: 18px auto;
+      }
+    }
+  }
+  .comment-reply-link {
+    @include museoSansCyrl(600);
+    font-size: 14px;
+    color: $amaranth;
+  }
+
+  // Media queries for tablet - start
+  @media screen and (min-width: 680px){
+    padding: 19px 0;
+
+    &__title {
+      font-size: 18px;
+      line-height: normal;
+    }
+    &__author {
+      position: static;
+
+      & + .postCard__border {
+        display: block;
+      }
+    }
+  }
+  // Media queries for laptops and desktop - start
+  @media screen and (min-width: 1280px){
+
+  }
+}
+
+#cancel-comment-reply-link{
+  font-weight: 600;
+  font-size: 14px;
+  color: #d0021b;
+}
+.comments-area a{
+  color: #d0021b;
+}
+.postItemCommentItem__like.active{
+  background: url(../img/icon_like_sprite.png) no-repeat 0 0;
+}
+.boxComments{
+  .postSidebarItem .postCard__comments:after{
+    top: 4px;
+  }
+}

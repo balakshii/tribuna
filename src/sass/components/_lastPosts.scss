@@ -1,0 +1,139 @@
+.lastPosts{
+  padding: 0 22px;
+  a{
+    color: $white;
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+  &__control{
+    padding: 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    button{
+      position: relative;
+      margin-right: 15px;
+      color: #939393;
+      @include museoSansCyrl(500);
+      font-size: 14px;
+      letter-spacing: 0.93px;
+      text-transform: uppercase;
+      &.active{
+        color: $white;
+        &:before{
+          width: 100%;
+          height: 4px;
+          background-color: $burgundy;
+          display: block;
+          position: absolute;
+          left:0;
+          top:-15px;
+          content: "";
+        }
+      }
+      &:last-child{
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__prev,&__next{
+    background: url("../img/arrow-ico.png") no-repeat;
+    width: 19px;
+    height: 9px;
+    background-size: cover !important;
+    cursor: pointer;
+    @media (-webkit-min-device-pixel-ratio: 2) {
+      background: url("../img/arrow-ico@2x.png") no-repeat;
+    }
+  }
+  &__next{
+    transform: scale(-1, 1);
+  }
+  &__title{
+    @include museoSansCyrl(500);
+    font-size: 14px;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+    min-height: 40px;
+    justify-content: space-between;
+    a{
+      display: inline-block;
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+    .topPost__border{
+      display: inline-block;
+    }
+    .topPost__comments{
+      display: inline-block;
+      min-width: 45px;
+    }
+  }
+  &__subtitle{
+    color: $after-grey;
+    @include museoSansCyrl(500);
+    font-size: 12px;
+    line-height: 22px;
+    a{
+      color: $after-grey;
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+  }
+  &__meta{
+    display: flex;
+    align-items: center;
+    color: $after-grey;
+    @include museoSansCyrl(500);
+    font-size: 12px;
+    line-height: 22px;
+    a{
+      color:$after-grey;
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+  }
+  &__border{
+    background-color: #353535;
+    width: 1px;
+    height: 12px;
+    margin: 0 10px;
+  }
+  &__listItems{
+    max-height: 575px;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease-in;
+    &.active{
+      opacity: 1;
+      display: block;
+    }
+  }
+  &__item{
+    padding: 10px 0;
+    border-bottom: 1px solid #222222;
+  }
+  &__commentsCount{
+    display: flex;
+  }
+  // Media queries for laptops and desktop - start
+  @media screen and (min-width: 1280px){
+    padding: 0 !important;
+    &__control{
+      justify-content: space-between;
+    }
+    &__item{
+      max-height: 120px;
+      overflow: hidden;
+    }
+    &__title{
+      overflow: hidden;
+    }
+  }
+}

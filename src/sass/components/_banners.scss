@@ -1,0 +1,54 @@
+.banners{
+  .container{
+    padding: 0 10px;
+  }
+  &__mobile{
+    height: 300px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    width: 100%;
+    overflow: hidden;
+    background-size: cover;
+  }
+  &__desktop{
+    display: none;
+  }
+  //.owl-item{
+  //  margin: 0 -1px;
+  //}
+  // Media queries for laptops and desktop - start
+  @media screen and (min-width: 1280px){
+    .container{
+      padding: 0 15px;
+    }
+    &__mobile{
+      display: none;
+    }
+    &__desktop{
+      display: block;
+      height: 140px;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      width: 100%;
+      overflow: hidden;
+    }
+  }
+  .owl-dots{
+    text-align: center;
+    line-height: 28px;
+    .owl-dot{
+      display: inline-block;
+      width: 9px;
+      height: 9px;
+      background-color: $white;
+      border-radius: 50%;
+      margin: 0 5px;
+      &.active{
+        background-color: #cdcdcd;
+      }
+    }
+  }
+  // Media queries for laptops and desktop - end
+}

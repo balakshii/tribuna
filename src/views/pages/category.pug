@@ -1,0 +1,29 @@
+//- category.pug
+
+extends ../layout.pug
+block variables
+    - var title = 'Медицина'
+block content
+    section.categoryPosts
+        .container
+            h1.main__title Медицина
+            .wrapColumn
+                .columnMain
+                    include ../components/slider
+                    .posts__col3
+                        include ../components/postCardThree
+                    .postsShort
+                        .postsShort__items
+                            include ../components/postCardShort
+                        button.btn.btn-white Більше матеріалів
+                            .btn__load
+                                | <i class="fas fa-sync fa-spin"></i>
+                .columnSidebar
+                    include ../components/postCardOnce
+                    .columnSidebar__item
+                        img(src="./dist/img/banner_sidebar.jpg").sidebar_img
+                    .columnSidebar__item.boxComments
+                        .columnSidebar__itemTitle Комментарі
+                        include ../components/comments
+                    .columnSidebar__item
+                        include ../components/postCardOnce

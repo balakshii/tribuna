@@ -1,0 +1,235 @@
+.slider{
+  &__imgContainer{
+    min-height: 180px;
+    position: relative;
+    margin: 0 -22px;
+    overflow: hidden;
+    text-align: center;
+   .slider__meta{
+     position: absolute;
+     left:22px;
+     bottom: 15px;
+   }
+  }
+  &__img{
+    display: inline-block !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+  &__item{
+    padding: 0 22px;
+    position: relative;
+  }
+  &__author{
+    display: block;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid $white;
+    width: 44px;
+    height: 44px;
+    position: relative;
+    img{
+      position: absolute;
+      left:0;
+      top:0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      display: block;
+      width: inherit !important;
+      filter: grayscale(100%);
+    }
+  }
+  &__video{
+    background-color: $burgundy;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    color:$white;
+    position: relative;
+    margin-left: 17px;
+    i{
+      position: absolute;
+      margin: auto;
+      left: 17px;
+      top: 14px;
+    }
+  }
+  &__meta{
+    display: flex;
+    color:$white;
+    margin-top: 20px;
+  }
+  &__date{
+    @include museoSansCyrl(900);
+    font-size: 24px;
+  }
+  &__time{
+    margin-left: 12px;
+    display: inline-block;
+    @include museoSansCyrl(500);
+    font-size: 18px;
+    line-height: 14px;
+    display: inline-block;
+    &:after{
+      content: "";
+      background-color: #979797;
+      opacity: 0.25;
+      height: 14px;
+      width: 1px;
+      display: inline-block;
+      margin: 0 11px;
+    }
+  }
+  &__comments{
+    @include museoSansCyrl(500);
+    font-size: 18px;
+    line-height: 14px;
+    i{
+      transform: scale(-1, 1);
+      color:$burgundy;
+      margin-left: 6px;
+      font-size: 17px;
+    }
+  }
+  &__title{
+    margin: 15px 0;
+    color: $white;
+    @include museoSansCyrl(900);
+    font-size: 21px;
+    line-height: 24px;
+    a{
+      color: $white;
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+  }
+  &__label{
+    color: #939393;
+    @include museoSansCyrl(500);
+    font-size: 12px;
+    letter-spacing: 0.8px;
+  }
+  .owl-dots{
+    position: absolute;
+    right: 22px;
+    bottom: 0;
+    .owl-dot{
+      background-color: #d8d8d8;
+      opacity: 0.5;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      margin: 0 4px;
+      &.active{
+        opacity: 1;
+      }
+    }
+  }
+  // Media queries for laptops and desktop - start
+  @media screen and (min-width: 1280px){
+    max-height: 548px;
+    height: 548px;
+    min-height: 548px;
+    display: block !important;
+    &__imgContainer{
+      min-height: 548px;
+      max-height: 548px;
+      height: 548px;
+      &:after{
+        background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, $black 100%);
+        opacity: 0.64;
+        display: block;
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left:0;
+        width: 100%;
+        height: 322px;
+        z-index: 1;
+      }
+      .slider__meta{
+        bottom: 210px;
+        left: 40px;
+      }
+    }
+    &__meta{
+      z-index: 2;
+    }
+    &__author{
+      width: 74px;
+      height: 74px;
+    }
+    &__video{
+      width: 74px;
+      height: 74px;
+      font-size: 27px;
+      i{
+        left: 27px;
+        top: 24px;
+      }
+    }
+    &__footer{
+      position: absolute;
+      bottom: 0;
+      z-index: 2;
+      bottom: 44px;
+      left: 40px;
+    }
+    &__date{
+      @include museoSansCyrl(900);
+      font-size: 48px;
+      line-height: 39px;
+      position: relative;
+    }
+    &__time{
+      line-height: 19px;
+      font-size: 24px;
+      position: relative;
+      top:-17px;
+      &:after{
+        height: 19px;
+      }
+    }
+    &__comments{
+      font-size: 24px;
+      position: relative;
+      top:-17px;
+      i{
+        font-size: 21px;
+      }
+    }
+    &__title{
+      font-size: 30px;
+    }
+    &__label{
+      font-size: 14px;
+      position: relative;
+      bottom: -15px;
+    }
+    .owl-dots{
+      left: 200px;
+      bottom: 28px;
+      right: auto;
+      top: auto;
+    }
+    .owl-prev,.owl-next{
+      position: absolute;
+      top:50%;
+      left: 10px;
+      margin-top: -33px;
+      color:white !important;
+      font-size: 55px !important;
+      span{
+        text-shadow: black 0px 2px 2px;
+      }
+    }
+    .owl-next{
+      left: auto;
+      right: 10px;
+    }
+  }
+
+  // Media queries for laptops and desktop - end
+}

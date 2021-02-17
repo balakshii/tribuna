@@ -1,0 +1,115 @@
+.footer{
+  margin-top: 10px;
+  padding: 20px 0;
+  background-color: $dark-grey;
+  &__menu,&__about{
+    display: none;
+  }
+  .logo{
+    background-image: url('../img/logo.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: auto;
+    width: 44px;
+    height: 44px;
+    display: block;
+    @media (-webkit-min-device-pixel-ratio: 2) {
+      background-image: url('../img/logo@2x.png');
+    }
+  }
+  .socialButtons{
+    margin: 20px auto 0 auto;
+    display: flex;
+    list-style: none;
+    color:$white;
+    font-size: 14px;
+    padding: 0;
+    justify-content: center;
+    li{
+      background-color: #414141;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      text-align: center;
+      margin: 0 5px;
+      line-height: 32px;
+      &:hover{
+        a{
+          color: #2196f3;
+        }
+      }
+      a{
+        transition: color 0.3s;
+        color:$white;
+      }
+    }
+  }
+  &__text{
+    color: $light-grey;
+    @include museoSansCyrl(500);
+    font-size: 14px;
+    line-height: 20px;
+    width: 250px;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 15px;
+    a{
+      display: block;
+      color: $light-grey;
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+  }
+  // Media queries for laptops and desktop - start
+  @media screen and (min-width: 1280px){
+    margin-top: 26px;
+    &__menu,&__about{
+      display: block;
+    }
+    .socialButtons{
+      margin-top: 10px;
+      justify-content: flex-start;
+    }
+    .logo,&__menu{
+      float: left;
+    }
+    &__menu{
+      list-style: none;
+      margin: 10px 0 0;
+      li{
+        display: inline-block;
+        &:hover{
+          a{
+            text-decoration: underline;
+          }
+        }
+      }
+      a{
+        padding: 0 13px;
+        color: $white;
+        @include museoSansCyrl(500);
+        font-size: 15px;
+      }
+    }
+    &__item{
+      
+      &:first-child{
+        width: 910px;
+        max-width: 910px;
+      }
+
+    }
+    .container{
+      display: flex;
+    }
+    &__text{
+      width: 100%;
+      text-align: left;
+    }
+    .logo{
+      margin: 0;
+    }
+  }
+  // Media queries for laptops and desktop - end
+}

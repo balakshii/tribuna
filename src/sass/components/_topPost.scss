@@ -1,0 +1,109 @@
+.topPost{
+  color:$white;
+  border-top: 1px solid #97979724;
+  padding: 25px 0;
+  a{
+    color: $white;
+    &:hover{
+      .topPost__title{
+        text-decoration: underline;
+      }
+    }
+  }
+  &__date{
+    @include museoSansCyrl(900);
+    font-size: 18px;
+  }
+  &__time{
+    @include museoSansCyrl(500);
+    font-size: 18px;
+    margin-left: 15px;
+  }
+
+  &__border{
+    background-color: #979797;
+    opacity: 0.25;
+    width: 1px;
+    height: 15px;
+    margin: 0 13px;
+  }
+  &__comments{
+    color: $white;
+    @include museoSansCyrl(500);
+    font-size: 18px;
+    line-height: 18px;
+    margin-right: 8px;
+    i{
+      transform: scale(-1, 1);
+      color: #b41726;
+      margin-left: 6px;
+      font-size: 17px;
+    }
+  }
+  &__meta{
+    display: flex;
+    align-items: center;
+    position: relative;
+    &:before{
+      content: "";
+      background-color: $burgundy;
+      width: 4px;
+      height: 100%;
+      position: absolute;
+      left:-21px;
+      top:0;
+    }
+  }
+  &__title{
+    @include museoSansCyrl(500);
+    font-size: 15px;
+    line-height: 24px;
+  }
+  &__video,&__t,&__p{
+    width: 20px;
+    height: 20px;
+    margin: 0 8px 0 0;
+  }
+  &__video{
+    background: url("../img/vector/video_ico.svg") no-repeat;
+  }
+  &__p{
+    background: url("../img/vector/p_ico.svg") no-repeat;
+  }
+  &__t{
+    background: url("../img/vector/t_ico.svg") no-repeat;
+  }
+  // Media queries for laptops and desktop - start
+  @media screen and (min-width: 1280px){
+    width: 33.3%;
+    padding: 0 0 30px 19px;
+     &__title{
+       max-width: 230px;
+       height: 68px;
+       overflow: hidden;
+       margin-top: 10px;
+     }
+    &__date{
+      font-size: 36px;
+    }
+    &__time{
+      font-size: 16px;
+    }
+    &__comments{
+      font-size: 16px;
+    }
+    &__meta{
+      height: 56px;
+      padding-top: 20px;
+      &:before{
+        width: 2px;
+        left: -19px;
+      }
+    }
+    &__time,&__border,&__comments,&__video,&__t,&__p{
+      position: relative;
+      top:-6px;
+    }
+  }
+  // Media queries for laptops and desktop - end
+}

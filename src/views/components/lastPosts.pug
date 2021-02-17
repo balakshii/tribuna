@@ -1,0 +1,29 @@
+.lastPosts
+    .lastPosts__control
+        button(data-action="lastPosts") ОСТАННі НОВИНИ
+        button(data-action="lastComments").active Комментарі
+    ul.lastPosts__listItems#lastPosts
+        - for (var x = 0; x < 5; x++)
+            li.lastPosts__item
+                h3.lastPosts__title
+                    a(href="/news-1.html#comment-1",title="Депутати планують заборонити продаж алкого...",) Депутати планують заборонити продаж алкого...
+                .lastPosts__meta
+                    .lastPosts__data 25.10.2018
+                    .lastPosts__border
+                    a(href="/author-1.html",title="Александр",).lastPosts__author Александр
+
+    ul.lastPosts__listItems.active#lastComments
+        - for (var x = 0; x < 5; x++)
+            li.lastPosts__item
+                h3.lastPosts__title
+                    a(href="/news-1.html#comment-1",title="Якщо алкоголь, який розпивають містяни у нічний час, є контрафактним, то яким же він буде після та…") Якщо алкоголь, який розпивають містяни у нічний час, є контрафактним, то яким же він буде після та…
+                h4.lastPosts__subtitle
+                    a(href="/news-1.html",title="Депутати планують заборонити продаж алкого...",) Депутати планують заборонити продаж алкого...
+                .lastPosts__meta
+                    .lastPosts__date 25.10.2018
+                    .lastPosts__border
+                    a(href="/author-1.html",title="Александр",).lastPosts__author Александр
+    .lastPosts__control
+        button(data-action="prevPosts").lastPosts__prev
+        a(href="/category-1.html",title="Показати всі",).lastPosts__more Показати всі
+        button(data-action="nextPosts").lastPosts__next

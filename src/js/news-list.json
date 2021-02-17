@@ -1,0 +1,30 @@
+{
+    "item-1" : {
+        "title" : "Скарги та війна підприємців: чи отримає полтавський аеропорт огорожу за 40 млн гривень?",
+        "img" : "./dist/img/posts/small-post-1.jpg",
+        "type" : "blog",
+        "label" : "СТАТТЯ ТИЖНЯ",
+        "date" : "21 листопада 2018",
+        "category" : "Блог"
+    },
+    "item-2" : {
+        "title" : "Культ. Огляд: полтавський рейв \"LOCAL0532\"",
+        "img" : "./dist/img/posts/small-post-2.jpg",
+        "type" : "video",
+        "date" : "21 листопада 2018",
+        "t" : true,
+        "p" : true
+    },
+    "item-3" : {
+        "title" : "Культ. Огляд: полтавський рейв \"LOCAL0532\"",
+        "img" : "./dist/img/posts/small-post-3.jpg",
+        "type" : "video",
+        "date" : "21 листопада 2018"
+    },
+    "item-4" : {
+        "title" : "Новий проект \"Трибуни\" — \"Полтавський ненаВісник\"",
+        "img" : "./dist/img/posts/small-post-4.jpg",
+        "type" : "video",
+        "date" : "21 листопада 2018"
+    }
+}

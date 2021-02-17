@@ -1,0 +1,21 @@
+//- blog.pug
+
+extends ../layout.pug
+block variables
+    - var title = 'Блоги'
+block content
+    section.posts
+        .container
+            h1.main__title Блоги
+            .posts__list
+                .row
+                    include ../components/blogCardMiddle
+                .row
+                    include ../components/postCard
+                .row
+                    include ../components/postCard
+                .row
+                    include ../components/postCard
+            button.btn.btn-white Більше матеріалів
+                .btn__load
+                    | <i class="fas fa-sync fa-spin"></i>

@@ -1,0 +1,48 @@
+.featuredPosts{
+  background-color: $after-black;
+  .container{
+    padding: 0;
+  }
+  ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  &__list{
+    padding: 0 22px;
+    margin-top: 15px;
+  }
+  &__sidebar{
+    border-top: 2px solid #97979724;
+  }
+
+  // Media queries for laptops and desktop - start
+  @media screen and (min-width: 1280px){
+    &__list{
+      margin-top: 0;
+      display: flex;
+      padding: 0;
+    }
+    .container{
+      justify-content: space-between;
+      padding: 0 15px;
+      display: flex;
+      &:after{
+        clear: both;
+        content: "";
+        display: table;
+      }
+    }
+    &__main{
+      width: 956px;
+      min-width: 956px;
+      float: left;
+    }
+    &__sidebar{
+      padding-left: 20px;
+    }
+    &__listItems{
+      display: none;
+    }
+  }
+}

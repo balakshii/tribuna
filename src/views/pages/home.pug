@@ -1,0 +1,65 @@
+//- home.pug
+
+extends ../layout.pug
+block variables
+    - var title = 'Головна сторінка'
+block content
+    section.quote
+        .container
+            .owl-carousel
+                - for (var x = 0; x < 3; x++)
+                    .quote__item
+                        h3.quote__title «Державні закупівлі», надмірна бюрократичність усіх процесів та процедур закупівель
+                        a(href="/news-1.html",,title="«Державні закупівлі», надмірна бюрократичність усіх процесів та процедур закупівель").quote__link Детальніше
+                            i.fal.fa-angle-right
+    section.featuredPosts
+        .container
+            .featuredPosts__main
+                include ../components/slider
+                .featuredPosts__list
+                    include ../components/topPost
+            .featuredPosts__sidebar
+                include ../components/lastPosts
+    section.posts
+        .container
+            .posts__list
+                .row
+                    include ../components/postCard
+                .row
+                    include ../components/postCardMiddle
+    section.banners
+        .container
+            .owl-carousel
+                div
+                    .banners__mobile(style="background-image:url('./dist/img/banner-m.jpg');")
+                    .banners__desktop(style="background-image:url('./dist/img/banner.jpg');")
+                div
+                    .banners__mobile(style="background-image:url('./dist/img/banner-m-2.jpg');")
+                    .banners__desktop(style="background-image:url('./dist/img/banner-2.jpg');")
+                div
+                    .banners__mobile(style="background-image:url('./dist/img/banner-m-3.jpg');")
+                    .banners__desktop(style="background-image:url('./dist/img/banner-3.jpg');")
+    .container
+        .section.blogs
+            h2.blogs__title Блоги
+            .blogs__list
+                .blogItem
+                    img(src="./dist/img/ava.jpg").blogItem__author
+                    .blogItem__title На дорогах Полтавщини працює більше 20 одиниць техніки
+                        .blogItem__date 21 листопада 2018
+                .blogItem
+                    img(src="./dist/img/ava-2.jpg").blogItem__author
+                    .blogItem__title Росія атакувала військові кораблі України в Азовському морі: що відомо станом на зараз
+                        .blogItem__date 21 листопада 2018
+                .blogItem
+                    img(src="./dist/img/ava.jpg").blogItem__author
+                    .blogItem__title На дорогах Полтавщини працює більше 20 одиниць техніки
+                        .blogItem__date 21 листопада 2018
+    section.posts
+        .container
+            .posts__list#posts-2
+                .row
+                    include ../components/postCard
+            button.btn.btn-white(data-load-more="posts-2",data-last-post-id="992") Більше матеріалів
+                .btn__load
+                    | <i class="fas fa-sync fa-spin"></i>
